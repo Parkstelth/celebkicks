@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 // const config = require("./config/key");
 const { auth } = require("./middleware/auth");
 const { User } = require("./models/User");
+const cors = require("cors");
 
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,6 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //application/json
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "https://celebkicks.com",
+    credentials: true,
+  })
+);
 
 const mongoose = require("mongoose");
 mongoose
