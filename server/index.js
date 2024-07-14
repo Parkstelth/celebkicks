@@ -36,7 +36,7 @@ mongoose
 
 app.get("/", (req, res) => {
   console.log("접속");
-  res.send("celebkicks-mobile-setting");
+  res.send("celebkicks-mobile-setting-n");
 });
 
 app.get("/api/imweb/setting", (req, res) => res.send("mobile:1"));
